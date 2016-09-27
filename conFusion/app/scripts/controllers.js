@@ -98,7 +98,7 @@ angular.module('confusionApp')
             // my comment: AboutController will supply data for aboutus.html template
 
 
-.controller('IndexController', ['$scope', '$stateParams', 'menuFactory', function($scope, $stateParams, menuFactory) {
+.controller('IndexController', ['$scope', '$stateParams', 'menuFactory', 'corporateFactory', function($scope, $stateParams, menuFactory, corporateFactory) {
 
             var promotion= menuFactory.getPromotion(0);
             
@@ -106,6 +106,23 @@ angular.module('confusionApp')
 
              var dish = menuFactory.getDish(0);
              $scope.dish = dish; 
+  
+          
+
+             var leader = corporateFactory.getLeader(3);
+             $scope.leader = leader;
+            
+        }])
+
+
+        .controller('AboutController', ['$scope', '$stateParams', 'menuFactory', 'corporateFactory', function($scope, $stateParams, menuFactory, corporateFactory) {
+
+           
+  
+             var leadership = corporateFactory.getLeaders();
+             $scope.leadership = leadership;
+
+            
             
         }])
 
