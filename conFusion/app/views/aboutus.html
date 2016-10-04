@@ -63,9 +63,11 @@
                             </a>
                         </div>
                         <div class="media-body">
-                            <h2 style="display:inline;" class="media-heading pull left">{{leader.name}}</h2>
-                            <span style="display:inline;" class="media-object pull left">{{leader.designation}}</span>
-                        
+                            <!-- old way -->
+                        <!-- <h2 style="display:inline;" class="media-heading pull left">{{leader.name}}</h2> -->
+                         <!--   <span style="display:inline;" class="media-object pull left">{{leader.designation}}</span> -->
+                         <!-- new way -->
+                        <h3 class="media-heading">{{leader.name}} <small>{{leader.designation}}</small> </h3    >
                             <p>{{leader.description}}</p>
                         </div>
                     </li>
